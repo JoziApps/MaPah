@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "homepage": "https://<your-github-username>.github.io/ma-pah/",
+  "homepage": "https://JoziApps.github.io/MaPah/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
