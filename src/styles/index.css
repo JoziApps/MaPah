@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: #080b10;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(79, 216, 232, 0.08), transparent),
+    linear-gradient(rgba(79, 216, 232, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(79, 216, 232, 0.035) 1px, transparent 1px);
+  background-size: auto, 48px 48px, 48px 48px;
+  color: #e6edf3;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2a6e78 #10161f;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: #10161f;
+}
+*::-webkit-scrollbar-thumb {
+  background: #2a6e78;
+  border-radius: 4px;
+}
+
+:focus-visible {
+  outline: 2px solid #4fd8e8;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@keyframes sweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hud-ring {
+  animation: sweep 12s linear infinite;
+}
