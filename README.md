@@ -44,7 +44,9 @@ which need a small serverless backend, which is why v2 moves to Vercel.
    choose **GitHub Actions**.
 6. Go to the **Actions** tab — you should see the "Deploy to GitHub Pages" workflow
    running automatically. Wait for it to finish (green check).
-7. Your app is live at `https://<your-username>.github.io/ma-pah/`.
+7. Your app is live at `https://<your-username>.github.io/<repo-name>/`.
+
+This project is currently deployed at **https://joziapps.github.io/MaPah/**.
 
 Every time you want to update the app afterwards, edit files directly on github.com
 (the pencil icon on any file) or use **Add file → Upload files** again to replace
@@ -52,8 +54,12 @@ them — each commit re-triggers the same automatic deploy.
 
 ### If you rename the repo
 
-Update two places to match: `base: "/your-repo-name/"` in `vite.config.js`, and
-`homepage` in `package.json`. Otherwise the deployed site's CSS/JS won't load correctly.
+Update two places to match, **using the exact same capitalization as the repo name**
+— GitHub Pages URLs are case-sensitive, so `ma-pah` and `MaPah` are different paths
+and mismatched casing is the #1 cause of a blank deployed page:
+
+- `base: "/YourRepoName/"` in `vite.config.js`
+- `"homepage"` in `package.json`
 
 ## Local development (optional — only if you ever use a computer with Node.js)
 

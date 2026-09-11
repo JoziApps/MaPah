@@ -1,8 +1,8 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-// Base path must match your GitHub repo name exactly (case-sensitive).
-// e.g. if your repo is github.com/you/MaPah, base is "/MaPah/".
+// Base path must match your GitHub repo name EXACTLY, including case —
+// GitHub Pages URLs are case-sensitive. Repo is joziapps/MaPah, so base is "/MaPah/".
 // If you deploy to a custom domain or user/org page (you.github.io), set base to "/".
 export default defineConfig({
   plugins: [react()],
